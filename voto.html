@@ -8,18 +8,23 @@
 </head>
 <body>
     
-    <div class="projeto">
+    <main class="container">
 
-        <h1>Você vota?</h1>
-        
-        <p>Sua idade:</p> <input type="number" name="idade" id="idade">
-        <input type="button" value="Verificar" onclick="calcular()">
+        <section class="projeto">
 
-        <div id="res"><p>Resultado</p></div>
-        
-        <button><a href="index.html">Voltar</a></button>
+            <h1>Você vota?</h1>
 
-    </div>
+            <input type="number" name="idade" id="idade" placeholder="Digite sua idade">
+
+            <input type="button" value="Verificar" onclick="calcular()">
+
+            <div id="res"><p>Resultado</p></div>
+
+            <a href="index.html" class="btn-voltar">Voltar</a>
+            
+        </section>
+
+    </main>
 
     <script>
 

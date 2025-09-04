@@ -1,60 +1,122 @@
 @charset "UTF-8";
 
 body {
-    background-color: black;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    height: 550px; /* ocupa a tela toda */
     margin: 0;
-    margin-top: 150px;
-}
-
-
-h1, p {
+    background-color: black;
+    font-family: Arial, sans-serif;
     color: rgb(250, 173, 8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda a altura da tela */
 }
 
-
-a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 8px;
-    font-size: 16px;
-    
-}
-
-
-button {
-    background-color:  orange;
-    border-radius: 8px;
-    padding: 8px;
-}
-
-
-
-/* campo de velocidade */
-
- input {
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 8px;
-    border: 2px solid orange;
-    border-radius: 5px;
-    margin-bottom: 12px;
-    background: #000;
-    color: white;
 }
-
-
-
-/* quadrado */
 
 .projeto {
-    background: #111; /* quadrado com fundo escuro */
-    padding: 40px;
+    background: #111;
+    padding: 30px;
     border: 2px solid orange;
     border-radius: 10px;
     text-align: center;
-    width: 180px; /* tamanho do quadrado */
+    max-width: 300px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid orange;
+    border-radius: 5px;
+    background: #000;
+    color: white;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+input[type="button"] {
+    background-color: orange;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 60%;
+}
+
+input[type="button"]:hover {
+    background-color: darkorange;
+}
+
+#res p {
+    margin-top: 15px;
+    font-size: 16px;
+    color: white;
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.btn-voltar:hover {
+    background-color: darkorange;
+}
+
+/* Responsividade */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .projeto {
+        padding: 25px;
+        max-width: 400px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+
+/* Celulares maiores */
+@media screen and (max-width: 480px) {
+    .projeto {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+}
+
+/* Celulares pequenos */
+@media screen and (max-width: 320px) {
+    .projeto {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 18px;
+    }
 }

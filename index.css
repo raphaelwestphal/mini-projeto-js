@@ -1,65 +1,98 @@
 @charset "UTF-8";
 
 body {
+    margin: 0;
     background-color: black;
+    font-family: Arial, sans-serif;
+    color: rgb(250, 173, 8);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 700px; /* ocupa a tela toda */
+    min-height: 100vh; /* Ocupa a tela inteira */
+    text-align: center;
 }
 
-
-h1 {
-    color: rgb(250, 173, 8);
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    box-sizing: border-box;
 }
-
-
-h2 {
-    color: rgb(250, 173, 8);
-}
-
-
-a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    padding: 8px;
-    font-size: 16px;
-    
-}
-
-button {
-    background-color:  orange;
-    border-radius: 8px;
-    padding: 8px;
-}
-
-
-/* titulo*/
 
 .titulo {
     font-size: 32px;
-    margin: 0;
     margin-bottom: 40px;
-    text-align: center;
 }
 
-
-/* projetos */
-
-.projeto {
+.projetos {
     display: flex;
-    gap: 50px;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Permite quebrar em telas menores */
 }
 
-
-/* quadrado */
-
-.radar, .voto {
-    background: #111; /* quadrado com fundo escuro */
-    padding: 40px;
+.card {
+    background: #111;
+    padding: 30px;
     border: 2px solid orange;
     border-radius: 10px;
+    width: 200px;
     text-align: center;
-    width: 180px; /* tamanho do quadrado */
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: rgb(250, 173, 8);
+}
+
+.btn {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: darkorange;
+}
+
+/* Responsividade */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .titulo {
+        font-size: 28px;
+    }
+    .card {
+        width: 180px;
+        padding: 25px;
+    }
+}
+
+/* Celulares maiores */
+@media screen and (max-width: 480px) {
+    .titulo {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .card {
+        width: 90%;
+        max-width: 300px;
+        padding: 20px;
+    }
+}
+
+/* Celulares pequenos */
+@media screen and (max-width: 320px) {
+    .titulo {
+        font-size: 20px;
+    }
+    .card {
+        padding: 15px;
+    }
 }

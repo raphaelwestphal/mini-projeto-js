@@ -36,10 +36,10 @@
 
             if (voto < 16) {
                 res.innerHTML = `<p><strong>Não vota</strong></p>`
-            } else if (voto < 18 || idade > 65 ) {
-                res.innerHTML = `<p><strong>Voto Obrigatório</strong></p>`
+            } else if (voto < 18 || voto > 65 ) {
+                res.innerHTML = `<p><strong>Voto Opcional</strong></p>`
             } else {
-                res.innerHTML = `<p><strong>Voto opcional</strong></p>`
+                res.innerHTML = `<p><strong>Voto Obrigatório</strong></p>`
             } 
 
 

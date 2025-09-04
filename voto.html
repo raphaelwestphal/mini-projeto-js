@@ -21,7 +21,7 @@
             <div id="res"><p>Resultado</p></div>
 
             <a href="index.html" class="btn-voltar">Voltar</a>
-            
+
         </section>
 
     </main>
@@ -37,9 +37,9 @@
             if (voto < 16) {
                 res.innerHTML = `<p><strong>Não vota</strong></p>`
             } else if (voto < 18 || idade > 65 ) {
-                res.innerHTML = `<p><strong>Voto opcional</strong></p>`
+                res.innerHTML = `<p><strong>Voto Obrigatório</strong></p>`
             } else {
-                res.innerHTML = `<p><strong>Voto obrigatório</strong></p>`
+                res.innerHTML = `<p><strong>Voto opcional</strong></p>`
             } 
 
 
